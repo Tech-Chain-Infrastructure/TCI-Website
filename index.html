@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCI-Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3';
+    background-image: url("IMGS/background.jpg" );
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+nav img {
+    width: 110px;
+    height: 80px;
+    padding-left: 70px;
+    padding-right: 120px;
+    object-fit: contain; 
+}
+
+nav a {
+    position: relative;
+    font-family: 'Source Sans 3';
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+nav a:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white; 
+    transition: all 0.3s ease-in-out; 
+}
+
+
+nav a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+
+.head {
+    justify-self: center;
+    margin-top: 120px;
+    align-items: center;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+        .card-container {
+            margin: 200px 50px 100px;
+            display: flex;
+            gap: 50px;
+            justify-content: center; 
+           
+        }
+        .card {
+            border: 1px solid #00000042;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 500px;
+            text-align: center;
+            background-color: #ffffff;
+            text-decoration: dashed rgb(0, 0, 0) 3px;
+           
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;;
+        }
+        .card-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: text-decoration 0.3s ease;  
+               color: rgb(0, 0, 0);
+            text-decoration: dashed underline rgb(15, 15, 38) 3px;
+            font-family: 'Source Sans 3';
+            font-weight: 700;
+        }
+        .card-title:hover {
+            text-decoration: none; 
+        }
+        .card img:hover {
+            transform: scale(1.1);
+        }
+        
+       
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: white;
+        }
+        footer p {
+            margin: 10px 0 0;
+        }
+  
+
+        h2 {
+            margin-left: 100px;
+        }
+        .sub-header { 
+            font-size: 18px; 
+             color: #000000; 
+     
+               
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+          
+            <a href="index.html"> <img src="IMGS/Screenshot_20250120_124747_WhatsApp-removebg.png" alt="">
+          <a href="#">Home</a>
+                 <a href="#">About</a> 
+                 <a href="#">Our Services</a>
+                  <a href="#">Contact Us</a>
+             
+            
+
+        </nav>  
+      
+              
+                <div class="head">
+                    <h1>Tech Chain Infrastructures</h1>
+                    <div class="sub-header"> Edtech &bull; Fintech &bull; E-commerce </div>
+                </div>
+
+                <div class="card-container">
+        <a href="#" class="card">
+            <img src="IMGS/image1.jpg" alt="Description of image 1">
+            <div class="card-title">Card Title 1 <i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+        <a href="#" class="card">
+            <img src="IMGS/image 2.jpg" alt="Description of image 2">
+            <div class="card-title">Card Title 2 <i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+        <a href="#" class="card">
+            <img src="IMGS/image3.jpg" alt="Description of image 3">
+            <div class="card-title">Card Title 3 <i class="fa-solid fa-arrow-right"></i></div>
+        </a>
+
+      
+    </style>
+</head>
+<body>
+    <!-- Your existing content -->
+      </div>  
+     
+    <footer>
+        <p>&copy; 2025 Tech Chain Infrastructures. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+ 
+    <script> 
+        
+    </script>
+
+  
+    </body>
+    </html>
+    
