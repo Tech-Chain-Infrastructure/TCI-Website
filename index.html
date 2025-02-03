@@ -195,7 +195,7 @@ h1 {
       </div>  
      
     <footer>
-        <p>&copy; 2025 Tech Chain Infrastructures. All rights reserved.</p>
+        <p id="copyright"></p>
         <p>
             <a href="#">Privacy Policy</a> |
             <a href="#">Terms of Service</a> |
@@ -204,7 +204,8 @@ h1 {
     </footer>
  
     <script> 
-        
+        var year = new Date().getFullYear();
+        document.getElementById("copyright").innerHTML = year + ". Tech Chain Infrastructures. All Rights Reserved."
     </script>
 
   
