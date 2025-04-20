@@ -48,6 +48,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.3.0",
     "express": "^5.1.0",
+    "firebase": "^11.6.0",
     "firebase-functions": "^6.3.2",
     "firebase-tools": "^14.2.0",
     "input-otp": "^1.2.4",
