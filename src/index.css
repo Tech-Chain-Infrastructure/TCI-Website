@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 30% 98%; /* Light green-white background */
+    --foreground: 120 50% 20%; /* Dark green text */
+
+    --primary: 120 50% 40%; /* Main logo green */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 120 50% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 120 50% 40%;
+    --accent-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 120 50% 20%;
+    --foreground: 120 30% 98%;
+
+    --card: 120 50% 20%;
+    --card-foreground: 120 30% 98%;
+
+    --popover: 120 50% 20%;
+    --popover-foreground: 120 30% 98%;
+
+    --primary: 120 50% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 120 50% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 50% 20%;
+    --muted-foreground: 120 30% 98%;
+
+    --accent: 120 50% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-tci-dark;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-6;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-4;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl mb-3;
+  }
+  
+  p {
+    @apply mb-4;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-12 md:py-20;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-tci-primary hover:bg-tci-primary/90 text-white font-medium py-2 px-6 rounded-md transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-tci-secondary hover:bg-blue-500 text-white font-medium py-2 px-6 rounded-md transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply bg-tci-accent hover:bg-teal-600 text-white font-medium py-2 px-6 rounded-md transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-tci-primary via-tci-secondary to-tci-accent;
+  }
+}
