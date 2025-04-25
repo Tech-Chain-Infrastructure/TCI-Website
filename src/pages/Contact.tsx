@@ -11,6 +11,7 @@ const Contact = () => {
       <HeroSection 
         title="Contact Us" 
         subtitle="Get in touch with our team for inquiries, services, or support"
+        backgroundImage="/tci_uploads/contact_us.jpg"
         buttonText=""
         buttonLink=""
       />
@@ -33,7 +34,6 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Email Us</h3>
                     <p className="text-gray-700">General Inquiries: info@tciplatform.com</p>
-                    <p className="text-gray-700">CEO Contact: gabrielobo26@gmail.com</p>
                   </div>
                 </div>
                 

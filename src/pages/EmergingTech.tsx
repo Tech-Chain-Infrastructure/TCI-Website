@@ -80,7 +80,7 @@ const EmergingTech = () => {
         title="Emerging Technologies" 
         subtitle="Pioneering the future through innovative technological solutions and research"
         buttonText="Explore Our Technologies"
-        backgroundImage="/tci_uploads/circuit-board-background.png"
+        backgroundImage="/tci_uploads/circuit-board-background.jpg"
       />
       
       <FeatureSection 

@@ -118,7 +118,6 @@ const Footer = () => {
             <h4 className="text-lg font-bold text-white mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="text-gray-300">Email: info@tciplatform.com</li>
-              <li className="text-gray-300">CEO: gabrielobo26@gmail.com</li>
               <li>
                 <Link
                   to="/contact"
@@ -131,7 +130,7 @@ const Footer = () => {
                 {" "}
                 <li>
                   <img
-                    src="..\public\TCII-removebg-preview.png"
+                    src="/tci_uploads/TCII-removebg-preview.png"
                     alt=""
                     className="w-1/6 h-auto"
                   />

@@ -1,34 +1,40 @@
-import * as functions from "firebase-functions";
+import { onRequest } from "firebase-functions/v2/https";
+import { defineSecret } from "firebase-functions/params";
 import * as nodemailer from "nodemailer";
 import cors from "cors";
 import express from "express";
 
-// Configure CORS
+// Define secrets
+const smtpUser = defineSecret("SMTP_USER");
+const smtpPass = defineSecret("SMTP_PASS");
+
 const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-// Configure mail transporter (replace with your credentials)
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "your-email@gmail.com",
-    pass: "your-app-password",
-  },
+// ✅ Health check route (Cloud Run looks for this)
+app.get("/", (req, res) => {
+  res.status(200).send("SendEmail Cloud Function is up and running.");
 });
 
-// POST endpoint for sending email
-app.post("/", async (req, res) => {
+app.post("/send", async (req, res) => {
   const { name, email, department, message } = req.body;
 
   if (!name || !email || !department || !message) {
-    res.status(400).send("Missing required fields");
-    return;
+    return res.status(400).send("Missing required fields");
   }
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: smtpUser.value(),
+      pass: smtpPass.value(),
+    },
+  });
 
   const mailOptions = {
     from: `"${name}" <${email}>`,
-    to: "your-receiving-email@example.com",
+    to: "emediongeshiet47@gmail.com",
     subject: `New Contact Form Message - ${department}`,
     text: `
       Name: ${name}
@@ -40,12 +46,14 @@ app.post("/", async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).send("Email sent successfully");
+    return res.status(200).send("Email sent successfully");
   } catch (error) {
     console.error("Email send error:", error);
-    res.status(500).send("Error sending email");
+    return res.status(500).send("Error sending email");
   }
 });
 
-// Export the cloud function
-export const sendEmail = functions.https.onRequest(app);
+export const sendEmail = onRequest(
+  { secrets: [smtpUser, smtpPass], region: "us-central1" },
+  app
+);

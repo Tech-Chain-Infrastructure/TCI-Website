@@ -39,7 +39,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        'https://us-central1-tci-website-dfc96.cloudfunctions.net/sendEmail',
+        'https://us-central1-tci-website-dfc96.cloudfunctions.net/sendEmail/send',
         {
           method: 'POST',
           headers: {
@@ -50,6 +50,7 @@ const ContactForm = () => {
       );
 
       const result = await response.text();
+      console.log("Email send result:", response);
 
       if (!response.ok) throw new Error(result);
 
@@ -119,7 +120,7 @@ const ContactForm = () => {
           <option value="Ed-Tech">Ed-Tech</option>
           <option value="Fin-Tech">Fin-Tech</option>
           <option value="E-Commerce">E-Commerce</option>
-          <option value="General">General Inquiry</option>
+          <option value="General-Inquiry">General Inquiry</option>
         </select>
       </div>
 

@@ -12,7 +12,7 @@ const ECommerce = () => {
       <HeroSection 
         title="E-Commerce Solutions" 
         subtitle="Bridging the gap between consumers and sellers with our innovative platform"
-        backgroundImage="/tci_uploads/e_commercebg.png"
+        backgroundImage="/tci_uploads/e_commercebg.jpg"
       />
       
       {/* Overview Section */}

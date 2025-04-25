@@ -12,7 +12,7 @@ const EdTech = () => {
       <HeroSection 
         title="Educational Technology" 
         subtitle="Empowering growth through innovative educational resources, outreach programs, and development services"
-        backgroundImage="/tci_uploads/edu_bg.png"
+        backgroundImage="/tci_uploads/edu_bg.jpg"
       />
       
       {/* Overview Section */}

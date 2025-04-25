@@ -12,7 +12,7 @@ const FinTech = () => {
       <HeroSection 
         title="Financial Technology" 
         subtitle="Innovative financial solutions with secure, high-performance transaction processing capabilities"
-        backgroundImage="/tci_uploads/finance.png"
+        backgroundImage="/tci_uploads/finance.jpg"
       />
       
       {/* Overview Section */}

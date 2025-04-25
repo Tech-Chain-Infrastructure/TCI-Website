@@ -63,25 +63,25 @@ const Index = () => {
     {
       title: "AI Development Solutions",
       category: "Emerging Tech",
-      image: "/tci_uploads/ai_developer.png",
+      image: "/tci_uploads/ai_developer.jpg",
       link: "/emergingtech",
     },
     {
       title: "Educational Platform Development",
       category: "Ed-Tech",
-      image: "/tci_uploads/edu.png",
+      image: "/tci_uploads/edu.jpg",
       link: "/edtech",
     },
     {
       title: "Payment Gateway Integration",
       category: "Fin-Tech",
-      image: "/tci_uploads/payment.png",
+      image: "/tci_uploads/payment.jpg",
       link: "/fintech",
     },
     {
       title: "E-Commerce Platform Solutions",
       category: "E-Commerce",
-      image: "/tci_uploads/e_commerce.png",
+      image: "/tci_uploads/e_commerce.jpg",
       link: "/ecommerce",
     },
   ];
@@ -94,7 +94,7 @@ const Index = () => {
         subtitle="Your trusted source for technology solutions and reviews"
         buttonText="Explore Our Services"
         buttonLink="services"
-        backgroundImage="/tci_uploads/tech_grid_background.png"
+        backgroundImage="/tci_uploads/tech_grid_background.jpg"
       />
 
       {/* Featured Services Section - similar to "Top Rated Products" */}
@@ -160,7 +160,7 @@ const Index = () => {
           <div
             className="absolute inset-0 z-0 opacity-5"
             style={{
-              backgroundImage: "url('/tci_uploads/tech-grid-background.png')",
+              backgroundImage: "url('/tci_uploads/tech-grid-background.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
