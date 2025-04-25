@@ -130,7 +130,7 @@ const Footer = () => {
                 {" "}
                 <li>
                   <img
-                    src="/tci_uploads/TCII-removebg-preview.png"
+                    src="..\public\TCII-removebg-preview.png"
                     alt=""
                     className="w-1/6 h-auto"
                   />

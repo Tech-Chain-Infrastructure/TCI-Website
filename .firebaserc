@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "tci-website-dfc96"
-  }
+    "default": "tci-admin-14fab"
+  },
+  "targets": {},
+  "etags": {}
 }

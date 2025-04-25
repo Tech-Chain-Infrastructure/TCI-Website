@@ -20,7 +20,7 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
 
       //after login, going back to homepage
-      navigate("/");
+      navigate("/admin");
     } catch (error) {
       //error message if login fails
       setError("Invalid login credentials. Please try again.");

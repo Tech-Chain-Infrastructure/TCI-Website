@@ -65,6 +65,6 @@ export const AdminProvider: React.FC<AdminProviderProps> = ({ children }) => {
 
 export const useAdmin = () => useContext(AdminContext);
 
-//for activating the button on condition. Add in adminLoggedIn && UpdateButton to dynamically render based on if admin is logged in or not.
+//for activating the button on condition. Add in adminLoggedIn && UpdateForm to dynamically render based on if admin is logged in or not.
 //also import this on every page before doing this ⬆
 //import { useAdmin } from "./AdminContext"; // Import the context to check admin status

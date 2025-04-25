@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
@@ -16,10 +16,44 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
-import { useAdmin } from "./AdminContext";
 
+import UpdateForm from "@/components/UpdateForm";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
+import UpdatesList from "@/components/UpdatesList";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
-  const { adminLoggedIn } = useAdmin();
+  const SecretCodeAccess = () => {
+    const [keys, setKeys] = useState<string[]>([]);
+    const [lastKeyTime, setLastKeyTime] = useState<number>(Date.now());
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const handleKey = (e: KeyboardEvent) => {
+        const now = Date.now();
+        if (!e.altKey) return;
+        const key = e.key.toUpperCase();
+        if (now - lastKeyTime > 5000) {
+          setKeys([e.key.toUpperCase()]);
+        } else {
+          setKeys((prev) => [...prev, e.key.toUpperCase()].slice(-4));
+        }
+        setLastKeyTime(now);
+      };
+
+      window.addEventListener("keydown", handleKey);
+      return () => window.removeEventListener("keydown", handleKey);
+    }, [lastKeyTime]);
+
+    useEffect(() => {
+      if (keys.join("") === "TCIA") {
+        navigate("/login");
+      }
+    }, [keys, navigate]);
+
+    return null;
+  };
+
   const keyFeatures = [
     {
       id: 1,
@@ -88,6 +122,7 @@ const Index = () => {
 
   return (
     <Layout>
+      <SecretCodeAccess />
       {/* Hero Section */}
       <HeroSection
         title="Tech Chain Infrastructure"
@@ -261,6 +296,9 @@ const Index = () => {
           <Features features={keyFeatures} />
         </div>
       </FeatureSection>
+      <section>
+        <UpdatesList></UpdatesList>
+      </section>
 
       {/* CTA Section */}
       <section className="bg-tci-dark text-white py-20 relative overflow-hidden">

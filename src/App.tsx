@@ -11,7 +11,7 @@ import EmergingTech from "./pages/EmergingTech";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
-import { AdminProvider } from "./pages/AdminContext";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -21,19 +21,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AdminProvider>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/edtech" element={<EdTech />} />
-            <Route path="/fintech" element={<FinTech />} />
-            <Route path="/ecommerce" element={<ECommerce />} />
-            <Route path="/emergingtech" element={<EmergingTech />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </AdminProvider>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/edtech" element={<EdTech />} />
+          <Route path="/fintech" element={<FinTech />} />
+          <Route path="/ecommerce" element={<ECommerce />} />
+          <Route path="/emergingtech" element={<EmergingTech />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
