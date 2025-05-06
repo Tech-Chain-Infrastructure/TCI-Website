@@ -126,16 +126,6 @@ const Footer = () => {
                   Send us a message
                 </Link>
               </li>
-              <Link to="/login">
-                {" "}
-                <li>
-                  <img
-                    src="..\public\TCII-removebg-preview.png"
-                    alt=""
-                    className="w-1/6 h-auto"
-                  />
-                </li>
-              </Link>
             </ul>
           </div>
         </div>

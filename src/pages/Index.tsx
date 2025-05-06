@@ -16,12 +16,9 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
-
-import UpdateForm from "@/components/UpdateForm";
-import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
-import UpdatesList from "@/components/UpdatesList";
 import { useNavigate } from "react-router-dom";
+import PostList from "@/components/PostList";
 const Index = () => {
   const SecretCodeAccess = () => {
     const [keys, setKeys] = useState<string[]>([]);
@@ -122,7 +119,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <SecretCodeAccess />
+      <SecretCodeAccess></SecretCodeAccess>
       {/* Hero Section */}
       <HeroSection
         title="Tech Chain Infrastructure"
@@ -277,7 +274,10 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      <section>
+        <h3 className="ml-[50px] mt-10 text-center">What's new in TCI?</h3>
+        <PostList />
+      </section>
       {/* Key Features Section */}
       <FeatureSection
         title="Our Platform Features"
@@ -296,9 +296,6 @@ const Index = () => {
           <Features features={keyFeatures} />
         </div>
       </FeatureSection>
-      <section>
-        <UpdatesList></UpdatesList>
-      </section>
 
       {/* CTA Section */}
       <section className="bg-tci-dark text-white py-20 relative overflow-hidden">

@@ -21,9 +21,11 @@ const Login = () => {
 
       //after login, going back to homepage
       navigate("/admin");
+      alert("Logged");
     } catch (error) {
       //error message if login fails
       setError("Invalid login credentials. Please try again.");
+      alert("not logged");
     } finally {
       setLoading(false); //to reset loading state
     }
@@ -38,7 +40,7 @@ const Login = () => {
 
         <form onSubmit={handleLogin}>
           {" "}
-          {/* on submit handler for formm submit */}
+          {/* on submit handler for form submit */}
           <div className="mb-4">
             <label
               htmlFor="email"
