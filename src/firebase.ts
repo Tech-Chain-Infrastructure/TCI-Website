@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAXQf4zy1OaHg7N9L6UBFkhApr7eFrInpU",
-  authDomain: "tci-admin-14fab.firebaseapp.com",
-  projectId: "tci-admin-14fab",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: "tci-admin-14fab.firebasestorage.app",
-  messagingSenderId: "243277107078",
-  appId: "1:243277107078:web:037979799c0c3bc0f36607",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-BFXZVKF57E"
 };
 
@@ -18,4 +18,4 @@ const auth = getAuth(app);
 const db = getFirestore(app); 
 const storage = getStorage(app);
 
-export { auth, db, storage };  
+export { auth, db, storage };

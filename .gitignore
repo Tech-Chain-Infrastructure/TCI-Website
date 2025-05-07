@@ -99,3 +99,4 @@ web_modules/
 
 # TernJS
 .tern-port
+.env
