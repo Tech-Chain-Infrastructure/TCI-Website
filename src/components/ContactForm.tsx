@@ -39,7 +39,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        'https://us-central1-tci-website-dfc96.cloudfunctions.net/sendEmail/send',
+        'https://us-central1-tci-admin-14fab.cloudfunctions.net/sendEmail/send',
         {
           method: 'POST',
           headers: {
@@ -65,7 +65,7 @@ const ContactForm = () => {
         department: '',
         message: ''
       });
-    } catch (error: any) {
+    } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error sending your message. Please try again later.",
