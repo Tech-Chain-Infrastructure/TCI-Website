@@ -11,7 +11,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
     "@radix-ui/react-aspect-ratio": "^1.1.0",
@@ -41,9 +40,7 @@
     "@radix-ui/react-tooltip": "^1.1.4",
     "@tanstack/react-query": "^5.56.2",
     "body-parser": "^2.2.0",
-    "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.1",
-    "cloudinary": "^2.8.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "cors": "^2.8.5",
@@ -57,7 +54,7 @@
     "input-otp": "^1.2.4",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
-    "nodemailer": "^6.10.1",
+    "nodemailer": "^7.0.11",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -69,8 +66,7 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "vaul": "^0.9.3",
-    "zod": "^3.23.8"
+    "vaul": "^0.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

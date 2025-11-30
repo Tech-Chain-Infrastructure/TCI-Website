@@ -94,25 +94,25 @@ const Index = () => {
     {
       title: "AI Development Solutions",
       category: "Emerging Tech",
-      image: "/tci_uploads/ai_developer.jpg",
+      image: "https://media.istockphoto.com/id/2204727157/photo/ai-automation-and-processing-technology-for-efficient-workflow-management-and-innovation.webp?s=1024x1024&w=is&k=20&c=WuaiRc0TT1vAtgCsxaT10KWxURsdOkgfMCNPppy-9mo=",
       link: "/emergingtech",
     },
     {
       title: "Educational Platform Development",
       category: "Ed-Tech",
-      image: "/tci_uploads/edu.jpg",
+      image: "https://media.istockphoto.com/id/1968806058/photo/educational-technology-concept-online-connection-of-educational-information.webp?s=1024x1024&w=is&k=20&c=tW0WuJpZYhecLw2g5NXF0KBLJw2NovAkVhG23svndg8=",
       link: "/edtech",
     },
     {
       title: "Payment Gateway Integration",
       category: "Fin-Tech",
-      image: "/tci_uploads/payment.jpg",
+      image: "https://images.unsplash.com/photo-1726064855988-1e4deb0a3392?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/fintech",
     },
     {
       title: "E-Commerce Platform Solutions",
       category: "E-Commerce",
-      image: "/tci_uploads/e_commerce.jpg",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/ecommerce",
     },
   ];
@@ -140,13 +140,13 @@ const Index = () => {
             {featuredServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
+                className="bg-white rounded-2xl shadow-md overflow-hidden transition-shadow hover:shadow-xl"
               >
-                <div className="relative h-48">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <span className="absolute top-3 right-3 bg-tci-primary text-white py-1 px-3 rounded-full text-sm font-medium">
                     {service.category}
